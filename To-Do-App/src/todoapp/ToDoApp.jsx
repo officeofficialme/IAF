@@ -121,7 +121,7 @@ function ToDoApp() {
                             }
                         }}
                         onChange={(e) => { setNewTask(e.target.value) }} className="w-80 h-12 text-2xl border-b-2 outline-none" />
-                    <button className="px-8 py-2 bg-blue-700 text-xl text-white rounded-xl shadow-lg shadow-blue-500 active:shadow-md outline-none active:translate-[2px]" onClick={(e) => { addOrUpdateTask(e, 'add') }}>Add Task</button>
+                    <button className="px-8 py-2 bg-blue-700 text-xl text-white rounded-xl shadow-lg shadow-blue-500 active:shadow-md outline-none active:translate-[2px]" onClick={(e) => { addOrUpdateTask('add') }}>Add Task</button>
                 </div>
             </div>
             <div className="">
