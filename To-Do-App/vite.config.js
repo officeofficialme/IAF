@@ -1,8 +1,8 @@
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 
-// https://vite.dev/config/
+// GitHub Pages project URL uses the repository name: /IAF/
 export default defineConfig({
   plugins: [react()],
-  base: '/to-do-app/',
+  base: '/IAF/',
 })
