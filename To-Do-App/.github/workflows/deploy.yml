@@ -21,7 +21,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: ./YOUR_FOLDER_NAME
+        working-directory: ./To-Do-App
 
     environment:
       name: github-pages
@@ -49,7 +49,7 @@ jobs:
       - name: Upload website files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./YOUR_FOLDER_NAME/dist
+          path: ./To-Do-App/dist
 
       - name: Deploy website
         id: deployment
