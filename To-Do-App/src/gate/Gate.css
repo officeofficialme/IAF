@@ -1,0 +1,165 @@
+
+.gate-section {
+  position: relative;
+  min-height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #100c0b;
+  color: #f7ead5;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.gate-background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(130, 83, 48, 0.3),
+      transparent 58%
+    ),
+    linear-gradient(180deg, #211613, #090707);
+}
+
+.gate-heading {
+  position: absolute;
+  top: 9%;
+  left: 20px;
+  right: 20px;
+  z-index: 5;
+  text-align: center;
+  pointer-events: none;
+}
+
+.gate-eyebrow {
+  margin: 0 0 10px;
+  color: #c7a77b;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.35em;
+}
+
+.gate-heading h1 {
+  margin: 0;
+  font-size: clamp(48px, 8vw, 100px);
+  font-weight: 400;
+  letter-spacing: 0.18em;
+}
+
+.gate-subtitle {
+  margin-top: 8px;
+  color: #cbbca9;
+  font-size: clamp(13px, 1.5vw, 17px);
+  font-style: italic;
+}
+
+.gate-doorway {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  perspective: 1400px;
+  perspective-origin: center;
+}
+
+.gate-door {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background: #241711;
+  border: 1px solid #8f6b40;
+  box-shadow:
+    inset 0 0 0 8px #1b100c,
+    inset 0 0 0 10px #70502e,
+    inset 0 0 60px rgba(0, 0, 0, 0.8);
+}
+
+.left-gate {
+  transform-origin: left center;
+  border-right: 2px solid #c29a61;
+}
+
+.right-gate {
+  transform-origin: right center;
+  border-left: 2px solid #c29a61;
+}
+
+.gate-panel {
+  position: absolute;
+  inset: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(194, 154, 97, 0.65);
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent 38px,
+      rgba(185, 133, 76, 0.05) 39px,
+      transparent 41px
+    ),
+    linear-gradient(135deg, #3b2619, #170e0b 70%);
+}
+
+.gate-panel::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(194, 154, 97, 0.35);
+}
+
+.gate-ornament {
+  color: #b9925e;
+  font-size: clamp(32px, 5vw, 64px);
+  opacity: 0.85;
+}
+
+.gate-instruction {
+  position: absolute;
+  bottom: 5%;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #d3b58c;
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.25em;
+}
+
+.gate-line {
+  width: 30px;
+  height: 1px;
+  background: #a78354;
+}
+
+@media (max-width: 600px) {
+  .gate-panel {
+    inset: 10px 7px;
+  }
+
+  .gate-panel::before {
+    inset: 7px;
+  }
+
+  .gate-door {
+    box-shadow:
+      inset 0 0 0 4px #1b100c,
+      inset 0 0 0 6px #70502e,
+      inset 0 0 30px rgba(0, 0, 0, 0.8);
+  }
+
+  .gate-instruction {
+    font-size: 8px;
+    gap: 8px;
+  }
+
+  .gate-line {
+    width: 18px;
+  }
+}
